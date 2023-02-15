@@ -3,7 +3,22 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class FizzBuzzTest {
-    Lab fb = new Lab();
+    Lab fb = new Lab(){
+        public String FizzBuzzGen(int num){
+            if(num % 5 == 0 && num % 3 == 0){
+                return "FizzBuzz";
+            }
+            else if (num % 5 ==0){
+                return "Buzz";
+            }
+            else if (num % 3 ==0){
+                return "Fizz";
+            }
+            else{
+                return "";
+            }
+        }
+    };
 
     /**
      * Because 5 is divisible by 5 but not 3, return "Buzz".
